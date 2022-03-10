@@ -20,14 +20,14 @@ export default {
     }
   },
   mounted() {
-    window.fromFlutter()
+    window.fromFlutter = this.fromFlutter
   },
   methods: {
     fromFlutter(location) {
       document.getElementById("flutter-msg").innerHTML = location;
     },
     invokeNative() {
-      window['Toast'].postMessage('Trigger from Javascript code');
+      window['Toast'].postMessage(this.inputMsg);
     }
   }
 }
