@@ -33,7 +33,7 @@ export default {
       window['Toast'].postMessage(this.inputMsg);
     },
     invokeNativeJump() {
-      this.$router.push('flutterweb://result?value=cool')
+      window.location.href=`flutterweb://result?value=${this.inputMsg}`
     },
   }
 }
