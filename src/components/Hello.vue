@@ -7,7 +7,10 @@
     <div>
       <p>欲傳給Flutter的值:<span id="inputMsg">{{inputMsg}}</span></p>
     </div>
-    <button @click="invokeNative">點擊傳值給Flutter</button>
+    <button @click="invokeNative">點擊傳值給Flutter</button><br>
+<!--    <router-link to="http://youtube.com.tw">-->
+      <button style="margin-top: 10px" @click="invokeNativeJump">點擊傳值給Flutter並且跳到指定頁面</button>
+<!--    </router-link>-->
   </div>
 </template>
 <script>
@@ -28,7 +31,10 @@ export default {
     },
     invokeNative() {
       window['Toast'].postMessage(this.inputMsg);
-    }
+    },
+    invokeNativeJump() {
+
+    },
   }
 }
 </script>
