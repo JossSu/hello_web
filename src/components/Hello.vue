@@ -1,7 +1,9 @@
 <template>
   <div>
-    <div id="flutter-msg">{{msg}}</div>
-    <button>click</button>
+    <div id="flutter-msg">Message from Flutter: {{msg}}</div><br>
+    <input id="inputBox" v-model="inputMsg" placeholder="output to flutter">
+    <p id="inputMsg">Input Message is: {{inputMsg}}</p>
+    <button>click to open Flutter page</button>
   </div>
 </template>
 <script>
@@ -9,11 +11,12 @@ export default {
   name: 'Hello',
   data(){
     return {
-      msg: 'Hello!'
+      msg: 'Hello!',
+      inputMsg: ''
     }
   },
   mounted() {
-    this.fromFlutter()
+    window.fromFlutter()
   },
   methods: {
     fromFlutter(location) {
