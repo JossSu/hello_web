@@ -6,12 +6,8 @@
 
 <script>
 // @ is an alias to /src
-import Hello from '@/components/Hello.vue'
 
 export default {
   name: 'HomeView',
-  components: {
-    Hello
-  }
 }
 </script>
