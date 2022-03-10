@@ -4,8 +4,10 @@
     <div>
       請輸入：<input id="inputBox" v-model="inputMsg" placeholder="output to flutter">
     </div>
-    <p id="inputMsg">欲傳給Flutter的值: {{inputMsg}}</p>
-    <button>點擊傳值給Flutter</button>
+    <div>
+      <p>欲傳給Flutter的值:<span id="inputMsg">{{inputMsg}}</span></p>
+    </div>
+    <button @click="invokeNative">點擊傳值給Flutter</button>
   </div>
 </template>
 <script>
@@ -23,6 +25,9 @@ export default {
   methods: {
     fromFlutter(location) {
       document.getElementById("flutter-msg").innerHTML = location;
+    },
+    invokeNative() {
+      window['Toast'].postMessage('Trigger from Javascript code');
     }
   }
 }
