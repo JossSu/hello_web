@@ -11,9 +11,6 @@ export default {
       input: this.$route.query.input
     }
   },
-  // mounted() {
-  //   console.log('route', this.$route.query.input)
-  // }
 }
 </script>
 <style scoped>
