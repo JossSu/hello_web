@@ -8,8 +8,7 @@
       <p>欲傳給Flutter的值:<span>{{inputMsg}}</span></p>
     </div>
     <button @click="invokeNative">點擊傳值給Flutter</button><br>
-    <button style="margin-top: 10px" @click="invokeNativeJump">點擊傳值給Flutter並且跳到指定頁面</button><br>
-    <img style="padding-top: 50px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSPnoE8yz5VwpiA9XmKBbvtqhSfxbAilp5Yw&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSPnoE8yz5VwpiA9XmKBbvtqhSfxbAilp5Yw&usqp=CAU">
+    <button style="margin-top: 10px" @click="invokeNativeJump">點擊傳值給Flutter並且跳到指定頁面</button>
   </div>
 </template>
 <script>
