@@ -1,14 +1,15 @@
 <template>
   <div>
-    <div id="flutter-msg">從Flutter傳入的值: {{msg}}</div>
+    <div>從Flutter傳入的值: <span class="flutter-msg">{{msg}}</span></div>
     <div>
-      請輸入：<input id="inputBox" v-model="inputMsg" placeholder="output to flutter">
+      請輸入：<input v-model="inputMsg" placeholder="output to flutter">
     </div>
     <div>
-      <p>欲傳給Flutter的值:<span id="inputMsg">{{inputMsg}}</span></p>
+      <p>欲傳給Flutter的值:<span>{{inputMsg}}</span></p>
     </div>
     <button @click="invokeNative">點擊傳值給Flutter</button><br>
-    <button style="margin-top: 10px" @click="invokeNativeJump">點擊傳值給Flutter並且跳到指定頁面</button>
+    <button style="margin-top: 10px" @click="invokeNativeJump">點擊傳值給Flutter並且跳到指定頁面</button><br>
+    <img style="padding-top: 50px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSPnoE8yz5VwpiA9XmKBbvtqhSfxbAilp5Yw&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSPnoE8yz5VwpiA9XmKBbvtqhSfxbAilp5Yw&usqp=CAU">
   </div>
 </template>
 <script>
@@ -21,12 +22,8 @@ export default {
     }
   },
   mounted() {
-    window.fromFlutter = this.fromFlutter
   },
   methods: {
-    fromFlutter(location) {
-      document.getElementById("flutter-msg").innerHTML = location;
-    },
     invokeNative() {
       window['Toast'].postMessage(this.inputMsg);
     },
@@ -37,7 +34,7 @@ export default {
 }
 </script>
 <style scoped>
-#flutter-msg {
+.flutter-msg {
   margin-bottom: 40px;
 }
 </style>
