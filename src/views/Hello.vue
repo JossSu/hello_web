@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>從Flutter傳入的值: <span class="flutter-msg">{{msg}}</span></div>
+    <div id="flutter-msg">從Flutter傳入的值: {{msg}}</div>
     <div>
       請輸入：<input v-model="inputMsg" placeholder="output to flutter">
     </div>
@@ -25,8 +25,12 @@ export default {
     }
   },
   mounted() {
+    window.fromFlutter = this.fromFlutter
   },
   methods: {
+    fromFlutter(location) {
+      document.getElementById("flutter-msg").innerHTML = location;
+    },
     invokeNative() {
       window['Toast'].postMessage(this.inputMsg);
     },
