@@ -13,6 +13,8 @@
     <img style="width: 30px" src="../assets/arrow_top.webp">
     <img style="width: 30px" src="../assets/arrow_left.gif">
     <img style="width: 30px" src="../assets/arrow_right.gif">
+    <img style="width: 100px" src="../assets/girlpic_1.jpeg">
+    <img style="width: 100px" src="../assets/girlpic_2.jpeg">
   </div>
 </template>
 <script>
